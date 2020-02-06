@@ -20,6 +20,8 @@ services:
   database:
     image: mariadb
     restart: always
+    ports:
+      - 13360:3360    
     environment:
       # @see https://phabricator.wikimedia.org/source/mediawiki/browse/master/includes/DefaultSettings.php
       MYSQL_DATABASE: my_wiki
